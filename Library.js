@@ -23,7 +23,7 @@ const LordoftheFiles = new Book("Lord of the Flies", "William Golding", 336, tru
 const MobyDick = new Book("Moby Dick", "Herman Melville", 632, false)
 const TheOddessy = new Book("The Oddessy", "Homer", 416, false)
 
-Library = []
+let Library = []
 
 console.log(Object.getPrototypeOf(TheCatintheHat) === Book.prototype)
 console.log(Object.getPrototypeOf(TheLightningThief) === Book.prototype)
@@ -53,3 +53,10 @@ function displayLibrary(Library){
 displayLibrary(Library)
 
 
+let DialogButton = document.getElementById("showDialog")
+let NEWBOOK = document.getElementById("NBDialog")
+let Cheese = document.getElementById("")
+
+DialogButton.addEventListener("click", ()=>{
+    NEWBOOK.showModal()
+});
