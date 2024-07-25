@@ -55,8 +55,25 @@ displayLibrary(Library)
 
 let DialogButton = document.getElementById("showDialog")
 let NEWBOOK = document.getElementById("NBDialog")
-let Cheese = document.getElementById("")
+let NewBookTable = document.getElementById("NewBookCatalog2")
+let NewBookDiv = document.getElementById("NewBookCatalog")
+let confirmBtn = NEWBOOK.querySelector("#Confirm")
+let NBhRead = NEWBOOK.querySelector("#read")
+let NBTitle = NEWBOOK.querySelector("#Title")
+let NBPages = NEWBOOK.querySelector("#Pages")
+let NBAuthor = NEWBOOK.querySelector("#Author")
 
 DialogButton.addEventListener("click", ()=>{
     NEWBOOK.showModal()
+});
+
+NEWBOOK.addEventListener("close", (e)=>{
+    if (NEWBOOK.returnValue != "default"){
+        console.log(NEWBOOK.returnValue)
+        TableBook = document.createElement("td")
+
+    }
+});
+confirmBtn.addEventListener("click", (evet)=>{
+    console.log(NBAuthor.value, NBPages.value,NBTitle.value,NBhRead.value)
 });
